@@ -1,0 +1,146 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+
+} */
+
+/* .body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+
+
+} */
+
+.popup {
+    position: relative;
+    width: 0px;
+    height: 0px;
+    padding: 15px;
+    background-color: purple;
+    border-radius: 25px;
+    /* transform: rotate(45deg); */
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    transition: 0.5s;
+    /* margin-left: 75px;
+    margin-bottom: 150px;
+    margin-right: 75px; */
+    margin: auto;
+    /* margin-top: 100px; */
+    word-wrap: break-word;
+    
+}
+
+.popup.active {
+    width: 400px;
+    height: 400px;
+    transition: 0.5s;
+    align-items: center;
+
+
+}
+
+.popup::before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    width: 40px;
+    height: 40px;
+    background: black;
+    border-radius: 5px;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: 0.5s;
+    align-items: center;
+
+
+}
+
+.popup.active::before {
+    opacity: 1;
+    transition-delay: 0.5s;
+
+}
+
+
+.togglebtn {
+    position: absolute;
+    font-weight: bold;
+    min-width: 60px;
+    height: 60px;
+    background: purple;
+    bottom: -90px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.popup.active .togglebtn {
+    bottom: -90px;
+    transform: rotate(135deg);
+    background: rgb(200, 0, 0)
+}
+
+
+.togglebtn:hover {
+    background: #040305;
+    transition: 0.5s;
+}
+
+.togglebtn::before {
+    content: '+';
+    font-size: 2.5em;
+    color: #fff;
+    transition: 0.5s;
+
+}
+
+.popup.active .togglebtn:hover::before {
+    color: #040305;
+
+}
+
+.togglebtn:hover::before {
+    color: #9800ce;
+
+
+}
+
+.popup .pop {
+    min-width: 400px;
+    padding: 40px;
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.5s;
+
+}
+
+.popup.active .pop {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0.5s;
+}
+
+.popup .pop h2 {
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+ .popup .pop p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    align-items: center;
+}

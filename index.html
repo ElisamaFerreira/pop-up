@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-08">
+    <link rel="stylesheet" href="/style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="widht=device-width, initial-scale=1.0">
+    <title>Caixa - Pop Up</title>
+
+</head>
+<body>
+    <div>
+    <div class="popup">
+                <div class="pop">
+                    <h2>Título do Card</h2>
+                    <p>
+                        TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste
+                        TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste
+                        TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste.
+                    </p>
+    
+                </div>
+                <div class="togglebtn"></div>
+    </div>
+    </div>
+    
+            <script>
+                let togglebtn = document.querySelector('.togglebtn');
+                let popup = document.querySelector('.popup');
+    
+                togglebtn.onclick = function () {
+                    popup.classList.toggle('active');
+                }
+            </script>
+    
+
+</body>
